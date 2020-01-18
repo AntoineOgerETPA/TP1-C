@@ -5,6 +5,9 @@ int attaqueJ = 20;
 int ptdevieJ = 100;
 int i = 100;
 int choixj = 0;
+int PM = 20;
+int degatsMana = 5;
+
 
 int rand_a_b(int a, int b){
 			return rand()%(b-a) +a;
@@ -27,6 +30,11 @@ for(i=100; i>=0; i--){
 			printf("GENIAL");
 			break;
 	}
+if ( PM <=0){
+	printf("Tu n'a plus de Mana");
+	printf("1 = Attaque ; 2 = Défence \n");
+	scanf("%d", &choixj);
+}
 	printf("1 = Attaque ; 2 = Défence \n");
 	        scanf("%d", &choixj);
 
@@ -68,3 +76,31 @@ for(i=100; i>=0; i--){
                 printf("Le Monstre se protege \n");
             }
         }
+				if( choixj == 3){
+            if ( choixM == 1){
+            //Defence du Monstre :
+                printf("Le Monstre se protege \n");
+            //Joueur lance un sort :
+                printf("Vie de Joueur = %d \n", ptdevieJ);
+                printf("Joueur lance un sort ! %d \n", attaqueJ -= degatsMana);
+                printf("Mana utiliser = -4 PM \n");
+                printf("Le Monstre a perdu %d PV \n", degatsJ -= degatsMana);
+                printf("Vie du Monstre %d \n", ptdevieM -= degatsJ -= degatsMana);
+                printf("Mana du Joueur = %d \n", PM -= degatsMana);
+            }
+            else if( choixM == 2);{
+            //Joueur lance un sort :
+                printf("Vie de Joueur = %d \n", ptdevieJ);
+                printf("Joueur lance un sort ! %d \n", attaqueJ -= degatsMana);
+                printf("Mana utiliser = -4 PM \n");
+                printf("Le Monstre a perdu %d PV \n", degatsJ -= degatsMana);
+                printf("Vie du Monstre %d \n", ptdevieM -= degatsJ -= degatsMana);
+                printf("Mana du Joueur = %d \n", PM -= degatsMana);
+            //Attaque du Monstre :
+                printf("Attaque du Monstre %d \n", attaqueM);
+                printf("Le Joueur a perdu %d PV \n", degatsM);
+                printf("Vie du Joueur %d \n", ptdevieJ -= degatsM);
+            }
+        }
+			}
+	}
