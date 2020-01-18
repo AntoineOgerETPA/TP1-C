@@ -9,6 +9,15 @@ int main()
 
 int degatsM = attaqueM;
 int degatsJ = attaqueJ;
+for(i=100; i>=0; i--){
+	if ( ptdevieJ <= 0){
+			printf("MORT");
+			break;
+	}
+	if ( ptdevieM <= 0){
+			printf("GENIAL");
+			break;
+	}
 		//Attaque du Joueur :
                 printf("Le Joueur Attaque %d \n", attaqueJ);
                 printf("Le Monstre a perdu %d PV \n", degatsJ);
